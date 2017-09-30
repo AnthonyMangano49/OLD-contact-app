@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfContacts.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfContacts"
+        mc:Ignorable="d"
+        Title="Contact Manager V1.0" Height="350" Width="800" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="289*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dataGrid_contacts" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" Height="260" Width="767" Grid.ColumnSpan="3" SelectionMode="Single"/>
+        <Button x:Name="button_deleteContact" Content="Delete Selected Contact" HorizontalAlignment="Left" Margin="419.56,6,0,0" VerticalAlignment="Top" Width="140" RenderTransformOrigin="-0.027,0.07" Height="25" Click="button_deleteContact_Click" Grid.Column="2"/>
+        <Button x:Name="button_editContact" Content="Edit Selected Contact" HorizontalAlignment="Left" Margin="265.56,6,0,0" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.946,-0.514" Height="25" Click="button_editContact_Click" Grid.Column="2"/>
+        <Button x:Name="button_addContact" Content="Add New Contact" HorizontalAlignment="Left" Margin="111.56,6,0,0" VerticalAlignment="Top" Width="140" Height="25" Click="button_addContact_Click" Grid.Column="2"/>
+
+    </Grid>
+</Window>
